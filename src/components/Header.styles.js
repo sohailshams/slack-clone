@@ -40,6 +40,7 @@ export const HeaderSearch = styled.div`
   display: flex;
   padding: 0 50px;
   border: 1px gray solid;
+
   > input {
     background-color: transparent;
     outline: 0;
@@ -47,5 +48,16 @@ export const HeaderSearch = styled.div`
     text-align: center;
     color: #fafafa;
     min-width: 30vw;
+  }
+`;
+
+export const HeaderRight = styled.div`
+  flex: 0.3;
+  display: flex;
+  align-items: flex-end;
+
+  > .MuiSvgIcon-root {
+    margin-left: auto;
+    margin-right: 20px;
   }
 `;
