@@ -30,3 +30,22 @@ export const HeaderAvatar = styled(Avatar)`
     opacity: 0.8;
   }
 `;
+
+export const HeaderSearch = styled.div`
+  flex: 0.4;
+  opacity: 1;
+  border-radius: 6px;
+  text-align: center;
+  background-color: #421f44;
+  display: flex;
+  padding: 0 50px;
+  border: 1px gray solid;
+  > input {
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    text-align: center;
+    color: #fafafa;
+    min-width: 30vw;
+  }
+`;

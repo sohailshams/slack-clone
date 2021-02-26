@@ -1,7 +1,13 @@
 import React from 'react';
 import './Header.styles';
-import { HeaderAvatar, HeaderContainer, HeaderLeft } from './Header.styles';
+import {
+  HeaderAvatar,
+  HeaderContainer,
+  HeaderLeft,
+  HeaderSearch,
+} from './Header.styles';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import SearchIcon from '@material-ui/icons/Search';
 
 function Header() {
   return (
@@ -10,6 +16,10 @@ function Header() {
         <HeaderAvatar />
         <AccessTimeIcon />
       </HeaderLeft>
+      <HeaderSearch>
+        <SearchIcon />
+        <input placeholder="Search" />
+      </HeaderSearch>
     </HeaderContainer>
   );
 }
