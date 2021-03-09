@@ -5,7 +5,7 @@ import {
   SidebarOptionContainer,
 } from './SidebarOption.styles';
 
-function SidebarOption({ Icon, title, addChannelOption }) {
+function SidebarOption({ Icon, title, addChannelOption, id }) {
   const addChennel = () => {
     const chennelName = prompt('Please enter the chennel name');
 

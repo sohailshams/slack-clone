@@ -21,4 +21,7 @@ export const SidebarOptionContainer = styled.div`
   }
 `;
 
-export const SidebarOptionChennel = styled.div``;
+export const SidebarOptionChennel = styled.h3`
+  padding: 10px 0;
+  font-weight: 300;
+`;
