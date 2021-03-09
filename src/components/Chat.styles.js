@@ -41,3 +41,5 @@ export const HeaderRight = styled.div`
     font-size: 16px;
   }
 `;
+
+export const ChatMessages = styled.div``;
