@@ -4,8 +4,12 @@ import {
   SidebarOptionChennel,
   SidebarOptionContainer,
 } from './SidebarOption.styles';
+import { useDispatch } from 'react-redux';
+import { enterRoom } from '../features/appSlice';
 
 function SidebarOption({ Icon, title, addChannelOption, id }) {
+  const dispatch = useDispatch();
+
   const addChennel = () => {
     const chennelName = prompt('Please enter the chennel name');
 
@@ -16,7 +20,16 @@ function SidebarOption({ Icon, title, addChannelOption, id }) {
       });
     }
   };
-  const selectChennel = () => {};
+
+  const selectChennel = () => {
+    if (id) {
+      dispatch(
+        enterRoom({
+          roomId: id,
+        })
+      );
+    }
+  };
   return (
     <SidebarOptionContainer
       onClick={addChannelOption ? addChennel : selectChennel}
