@@ -1,10 +1,25 @@
 import React from 'react';
-import { ChatContainer } from './Chat.styles';
+import { ChatContainer, Header, HeaderLeft, HeaderRight } from './Chat.styles';
+import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 
 function Chat() {
   return (
     <ChatContainer>
-      <h3>This is Chat</h3>
+      <Header>
+        <HeaderLeft>
+          <h4>
+            <strong>#Room-name</strong>
+            <StarBorderOutlinedIcon />
+          </h4>
+        </HeaderLeft>
+        <HeaderRight>
+          <p>
+            <InfoOutlinedIcon />
+            Details
+          </p>
+        </HeaderRight>
+      </Header>
     </ChatContainer>
   );
 }
