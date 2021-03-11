@@ -19,7 +19,7 @@ function App() {
         <AppLoadingContents>
           <img
             src="https://cdn.mos.cms.futurecdn.net/SDDw7CnuoUGax6x9mTo7dd.jpg"
-            alt="slack image"
+            alt="slack logo"
           />
           <Spinner name="folding-cube" color="purple" fadeIn="none" />
         </AppLoadingContents>
