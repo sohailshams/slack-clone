@@ -19,4 +19,11 @@ export const LoginInnerContainer = styled.div`
     height: 100px;
     margin-bottom: 40px;
   }
+
+  > button {
+    margin-top: 20px;
+    text-transform: inherit !important;
+    background-color: #0a8d48;
+    color: white;
+  }
 `;
