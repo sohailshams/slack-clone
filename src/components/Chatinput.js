@@ -20,7 +20,7 @@ function Chatinput({ channelName, channelId }) {
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       user: 'Sohial Shams',
       userImage:
-        'https://www.google.com/imgres?imgurl=http%3A%2F%2Fassets.stickpng.com%2Fimages%2F5cb480cd5f1b6d3fbadece79.png&imgrefurl=https%3A%2F%2Fwww.stickpng.com%2Fimg%2Ficons-logos-emojis%2Ftech-companies%2Fslack-new-logo-icon&tbnid=-bX6hs6z8S09rM&vet=12ahUKEwjl_YvlraXvAhWDvSoKHZJjAOwQMygAegUIARCdAQ..i&docid=YY_hB-7elAX7UM&w=1600&h=1600&q=slack&hl=en&ved=2ahUKEwjl_YvlraXvAhWDvSoKHZJjAOwQMygAegUIARCdAQ',
+        'https://www.howtogeek.com/wp-content/uploads/2019/06/slack_logo.png?height=200p&trim=2,2,2,2',
     });
 
     setInput('');
