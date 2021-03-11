@@ -72,7 +72,11 @@ function Chat() {
           })}
           <ChatBottom ref={chatRef} />
         </ChatMessages>
-        <Chatinput channelName={roomDetails?.data().name} channelId={roomId} />
+        <Chatinput
+          chatRef={chatRef}
+          channelName={roomDetails?.data().name}
+          channelId={roomId}
+        />
       </>
     </ChatContainer>
   );

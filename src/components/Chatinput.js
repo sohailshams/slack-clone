@@ -4,7 +4,7 @@ import { Button } from '@material-ui/core';
 import { db } from '../firebase';
 import firebase from 'firebase';
 
-function Chatinput({ channelName, channelId }) {
+function Chatinput({ channelName, channelId, chatRef }) {
   const [input, setInput] = useState('');
 
   const sendMessage = (e) => {
@@ -21,6 +21,10 @@ function Chatinput({ channelName, channelId }) {
       user: 'Sohial Shams',
       userImage:
         'https://www.howtogeek.com/wp-content/uploads/2019/06/slack_logo.png?height=200p&trim=2,2,2,2',
+    });
+
+    chatRef.current.scrollIntoView({
+      behavior: 'smooth',
     });
 
     setInput('');
