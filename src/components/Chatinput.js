@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { ChatinputContainer } from './Chatinput.styles';
 import { Button } from '@material-ui/core';
-import { db } from '../firebase';
+import { auth, db } from '../firebase';
 import firebase from 'firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 function Chatinput({ channelName, channelId, chatRef }) {
   const [input, setInput] = useState('');
+  const [user] = useAuthState(auth);
 
   const sendMessage = (e) => {
     // Prevents refresh
@@ -18,9 +20,8 @@ function Chatinput({ channelName, channelId, chatRef }) {
     db.collection('rooms').doc(channelId).collection('messages').add({
       message: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      user: 'Sohial Shams',
-      userImage:
-        'https://www.howtogeek.com/wp-content/uploads/2019/06/slack_logo.png?height=200p&trim=2,2,2,2',
+      user: user.displayName,
+      userImage: user.photoURL,
     });
 
     chatRef.current.scrollIntoView({
