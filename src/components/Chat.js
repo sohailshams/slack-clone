@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
+  ChatBottom,
   ChatContainer,
   ChatMessages,
   Header,
@@ -14,13 +15,15 @@ import { useSelector } from 'react-redux';
 import { useCollection, useDocument } from 'react-firebase-hooks/firestore';
 import { db } from '../firebase';
 import Message from './Message';
+import { useRef } from 'react';
 
 function Chat() {
+  const chatRef = useRef(null);
   const roomId = useSelector(selectRoomId);
   const [roomDetails] = useDocument(
     roomId && db.collection('rooms').doc(roomId)
   );
-  const [roomMessages] = useCollection(
+  const [roomMessages, loading] = useCollection(
     roomId &&
       db
         .collection('rooms')
@@ -28,6 +31,12 @@ function Chat() {
         .collection('messages')
         .orderBy('timestamp', 'asc')
   );
+
+  useEffect(() => {
+    chatRef?.current?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }, [roomId, loading]);
 
   return (
     <ChatContainer>
@@ -61,6 +70,7 @@ function Chat() {
               />
             );
           })}
+          <ChatBottom ref={chatRef} />
         </ChatMessages>
         <Chatinput channelName={roomDetails?.data().name} channelId={roomId} />
       </>
