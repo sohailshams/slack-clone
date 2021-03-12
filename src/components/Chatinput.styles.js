@@ -15,6 +15,12 @@ export const ChatinputContainer = styled.div`
     border: 1px solid grey;
     outline: none;
     padding: 20px;
+    @media (max-width: 425px) {
+      width: 190px !important;
+    }
+    @media (max-width: 375px) {
+      width: 120px !important;
+    }
   }
 
   > form > button {

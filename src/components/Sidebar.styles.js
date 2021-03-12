@@ -7,6 +7,9 @@ export const SidebarContainer = styled.div`
   flex: 0.3;
   border-top: 1px solid #49274b;
   max-width: 260px;
+  @media (max-width: 425px) {
+    min-width: 125px !important;
+  }
 
   > hr {
     margin-top: 10px;
@@ -26,6 +29,10 @@ export const SidebarHeader = styled.div`
     font-size: 18px;
     background-color: #fafafa;
     border-radius: 50%;
+    @media (max-width: 425px) {
+      padding: 5px !important;
+      font-size: 10px !important;
+    }
   }
 `;
 
@@ -36,6 +43,9 @@ export const SidebarInfo = styled.div`
     font-size: 15px;
     font-weight: 900;
     margin-bottom: 5px;
+    @media (max-width: 425px) {
+      font-size: 11px !important;
+    }
   }
 
   > h3 {
