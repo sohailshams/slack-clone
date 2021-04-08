@@ -28,11 +28,11 @@ Slack-Clone is developed in connection to my learning of **React**. Users can lo
 
 ## Deployment
 
-The deployed project and project's **github repository** can be viewed on following links. To test card payments use
+The deployed project and project's **github repository** can be viewed on following links.
 
 - **[Slack Clone Live Page](https://slack-clone-7a183.web.app/)**
 
-- **[Slack Clone Live Page Github Repository](https://github.com/sohailshams/slack-clone)**
+- **[Slack Clone Github Repository](https://github.com/sohailshams/slack-clone)**
 
 ## Credits
 
